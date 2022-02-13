@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    top: 0;
+}
+
+.botones_accesso{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    position: relative;
+}
+
+.botones_accesso button{
+    width: 120px;
+    text-align: center;
+    position: relative;
+}
+
+@media (min-width: 576px){
+    .card-group {
+        display: flex;
+        padding: 20px;
+        flex-flow: row wrap;
+    }
+}

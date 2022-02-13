@@ -27,3 +27,24 @@
         flex-flow: row wrap;
     }
 }
+
+.card_inicio{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.card_inicio .cards{
+    display: flex;
+    align-items: center;
+}
+.card_inicio .cards p{
+    font-size: 2em;
+    color: gray;
+    padding-left: 20px;
+    padding-block-start: 2px;
+}

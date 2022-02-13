@@ -1,4 +1,5 @@
-<php include "config/config.php" ; ?>
+<php include "config/config.php" ;
+include "assets/ficheros/consultaB.php"; ?>
 
 
     <!DOCTYPE html>
@@ -19,25 +20,33 @@
     </head>
 
     <body>
-        <h1 style="text-align:center;">Bienvenido a la sucursal LAS AMERICAS</h1>
-        <?php include 'config/config.php';
-                        $evento = "SELECT * FROM eventos";
+        <h1 style="text-align:center;">Bienvenido a la sucursal LAS AMERICAS</h1>       
+        <section class="container" style="text-align:center;">
+        <div class="card_inicio">
+            <div class="cards shadow p-3 mb-5 bg-body rounded">
+                <h3>Clientes</h3>
+                <p><?php echo $total_eventos_db;?></p>
+            </div>
+            <div class="cards shadow p-3 mb-5 bg-body rounded">
+                <h3>Proveedores</h3>
+                <p><?php echo $total_eventos_db;?></p>
+            </div>
+            <div class="cards shadow p-3 mb-5 bg-body rounded">
+                <h3>Productos</h3>
 
-                        //Llamar a todos los eventos
-
-
-                        $sql = "SELECT * FROM eventos";
-                        $sentencia = $pdo->prepare($sql);
-                        $sentencia->execute();
-
-                        $resultados = $sentencia->fetchAll();
-
-                        // var_dump($resultados);
-
-                        $articulo_x_pagina = 8;
-
-                        $total_eventos_db = $sentencia->rowCount();
-                        // echo $total_eventos_db;?>
+            </div>
+            <div class="cards shadow p-3 mb-5 bg-body rounded">
+                <h3>Trabajadores</h3>
+                <p></p>
+            </div>
+            <div class="cards shadow p-3 mb-5 bg-body rounded">
+                <h3>Pedidos</h3>
+            </div>
+            <div class="cards shadow p-3 mb-5 bg-body rounded">
+                <h3>Sucursales</h3>
+            </div>
+        </section>
+        </div>
         <div class="botones_accesso">
             <section class="container">
                 <div class="row">

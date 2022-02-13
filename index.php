@@ -1,4 +1,4 @@
-<php include_once "config/config.php" ; ?>
+<php include "config/config.php" ; ?>
 
 
     <!DOCTYPE html>
@@ -20,7 +20,24 @@
 
     <body>
         <h1 style="text-align:center;">Bienvenido a la sucursal LAS AMERICAS</h1>
+        <?php include 'config/config.php';
+                        $evento = "SELECT * FROM eventos";
 
+                        //Llamar a todos los eventos
+
+
+                        $sql = "SELECT * FROM eventos";
+                        $sentencia = $pdo->prepare($sql);
+                        $sentencia->execute();
+
+                        $resultados = $sentencia->fetchAll();
+
+                        // var_dump($resultados);
+
+                        $articulo_x_pagina = 8;
+
+                        $total_eventos_db = $sentencia->rowCount();
+                        // echo $total_eventos_db;?>
         <div class="botones_accesso">
             <section class="container">
                 <div class="row">
@@ -39,10 +56,10 @@
                                 </p>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted"><a href=""><button type="submit"
-                                        class="btn btn-primary"><i class="bi bi-plus-lg"></i>Ingresar</button></a></small>
-                                <small class="text-muted"><a href=""><button type="submit"
-                                        class="btn btn-success"><i class="bi bi-file-earmark-pdf-fill"></i>Reporte</button></a></small>
+                                <small class="text-muted"><a href=""><button type="submit" class="btn btn-primary"><i
+                                                class="bi bi-plus-lg"></i>Ingresar</button></a></small>
+                                <small class="text-muted"><a href=""><button type="submit" class="btn btn-success"><i
+                                                class="bi bi-file-earmark-pdf-fill"></i>Reporte</button></a></small>
                             </div>
                         </div>
                         <div class="card">
@@ -59,10 +76,10 @@
                                 </p>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted"><a href=""><button type="submit"
-                                        class="btn btn-primary"><i class="bi bi-plus-lg"></i>Ingresar</button></a></small>
-                                <small class="text-muted"><a href=""><button type="submit"
-                                        class="btn btn-success"><i class="bi bi-file-earmark-pdf-fill"></i>Reporte</button></a></small>
+                                <small class="text-muted"><a href=""><button type="submit" class="btn btn-primary"><i
+                                                class="bi bi-plus-lg"></i>Ingresar</button></a></small>
+                                <small class="text-muted"><a href=""><button type="submit" class="btn btn-success"><i
+                                                class="bi bi-file-earmark-pdf-fill"></i>Reporte</button></a></small>
                             </div>
                         </div>
                         <div class="card">
@@ -78,10 +95,10 @@
                                 </p>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted"><a href=""><button type="submit"
-                                        class="btn btn-primary"><i class="bi bi-plus-lg"></i>Ingresar</button></a></small>
-                                <small class="text-muted"><a href=""><button type="submit"
-                                        class="btn btn-success"><i class="bi bi-file-earmark-pdf-fill"></i>Reporte</button></a></small>
+                                <small class="text-muted"><a href=""><button type="submit" class="btn btn-primary"><i
+                                                class="bi bi-plus-lg"></i>Ingresar</button></a></small>
+                                <small class="text-muted"><a href=""><button type="submit" class="btn btn-success"><i
+                                                class="bi bi-file-earmark-pdf-fill"></i>Reporte</button></a></small>
                             </div>
                         </div>
                     </div>
@@ -98,11 +115,13 @@
                             </div>
                             <div class="card-footer">
                                 <div class="card-footer">
-                                <small class="text-muted"><a href=""><button type="submit"
-                                        class="btn btn-primary"><i class="bi bi-plus-lg"></i>Ingresar</button></a></small>
-                                <small class="text-muted"><a href=""><button type="submit"
-                                        class="btn btn-success"><i class="bi bi-file-earmark-pdf-fill"></i>Reporte</button></a></small>
-                            </div>
+                                    <small class="text-muted"><a href=""><button type="submit"
+                                                class="btn btn-primary"><i
+                                                    class="bi bi-plus-lg"></i>Ingresar</button></a></small>
+                                    <small class="text-muted"><a href=""><button type="submit"
+                                                class="btn btn-success"><i
+                                                    class="bi bi-file-earmark-pdf-fill"></i>Reporte</button></a></small>
+                                </div>
                             </div>
                         </div>
                         <div class="card">
@@ -117,11 +136,13 @@
                             </div>
                             <div class="card-footer">
                                 <div class="card-footer">
-                                <small class="text-muted"><a href=""><button type="submit"
-                                        class="btn btn-primary"><i class="bi bi-plus-lg"></i>Ingresar</button></a></small>
-                                <small class="text-muted"><a href=""><button type="submit"
-                                        class="btn btn-success"><i class="bi bi-file-earmark-pdf-fill"></i>Reporte</button></a></small>
-                            </div>
+                                    <small class="text-muted"><a href=""><button type="submit"
+                                                class="btn btn-primary"><i
+                                                    class="bi bi-plus-lg"></i>Ingresar</button></a></small>
+                                    <small class="text-muted"><a href=""><button type="submit"
+                                                class="btn btn-success"><i
+                                                    class="bi bi-file-earmark-pdf-fill"></i>Reporte</button></a></small>
+                                </div>
                             </div>
                         </div>
                         <div class="card">
@@ -136,11 +157,13 @@
                             </div>
                             <div class="card-footer">
                                 <div class="card-footer">
-                                <small class="text-muted"><a href=""><button type="submit"
-                                        class="btn btn-primary"><i class="bi bi-plus-lg"></i>Ingresar</button></a></small>
-                                <small class="text-muted"><a href=""><button type="submit"
-                                        class="btn btn-success"><i class="bi bi-file-earmark-pdf-fill"></i>Reporte</button></a></small>
-                            </div>
+                                    <small class="text-muted"><a href=""><button type="submit"
+                                                class="btn btn-primary"><i
+                                                    class="bi bi-plus-lg"></i>Ingresar</button></a></small>
+                                    <small class="text-muted"><a href=""><button type="submit"
+                                                class="btn btn-success"><i
+                                                    class="bi bi-file-earmark-pdf-fill"></i>Reporte</button></a></small>
+                                </div>
                             </div>
                         </div>
                     </div>

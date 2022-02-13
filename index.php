@@ -36,7 +36,6 @@
                                     <li>Crea una alta</li>
                                     <li>Elimina a un usuario</li>
                                     <li>Actualiza los datos</li>
-                                    
                                 </p>
                             </div>
                             <div class="card-footer">

@@ -42,9 +42,9 @@ $pagina = 0;
                 </thead>
                 <tbody>
                     <?php if (!$_GET) {
-              header('location: http://localhost:3000/views/clientes.php?pagina=1');
+              header('location: clientes.php?pagina=1');
             }if($_GET['pagina']>$paginas || $_GET['pagina']<=0){
-              header('location: http://localhost:3000/views/clientes.php?pagina=1');
+              header('location: clientes.php?pagina=1');
             }
 
             $iniciar = ($_GET['pagina']-1)*$articulo_x_pagina;
